@@ -14,16 +14,28 @@ def load_data(filename):
 
 def calculate_basic_stats(df):
     """Calculates total scores, percentages, and pass/fail status."""
-    # List of subjects
     subjects = ['Math_Score', 'Science_Score', 'English_Score', 'Coding_Score']
     
     # Calculate Total and Percentage
     df['Total_Score'] = df[subjects].sum(axis=1)
     df['Percentage'] = (df['Total_Score'] / 400) * 100
     
-    # Determine Pass/Fail (Assuming 40% is the passing mark overall)
-    # Using a simple lambda function which looks good for student projects
-    df['Status'] = df['Percentage'].apply(lambda x: 'Pass' if x >= 40 else 'Fail')
+    # Custom function to check individual subjects
+    def determine_status(row):
+        # Fail if any individual subject is below 40
+        if (row['Math_Score'] < 40 or 
+            row['Science_Score'] < 40 or 
+            row['English_Score'] < 40 or 
+            row['Coding_Score'] < 40):
+            return 'Fail'
+        # Fail if overall percentage is below 40
+        elif row['Percentage'] < 40:
+            return 'Fail'
+        else:
+            return 'Pass'
+            
+    # Apply the custom function to each row
+    df['Status'] = df.apply(determine_status, axis=1)
     
     return df
 
