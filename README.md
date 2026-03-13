@@ -31,9 +31,12 @@ The script reads a dataset of student scores, calculates their basic statistics,
 ## Project Output
 
    When you run the script, it outputs a statistical summary directly to the console:
-   --- Class Performance Summary ---
-   Total Students: 10
-   Class Average Percentage: 75.38%
-   Highest Percentage: 93.25% (Student: Amit)
-   Lowest Percentage: 43.00%
-   Passed: 9 | Failed: 1
+
+```text
+--- Class Performance Summary ---
+Total Students: 10
+Class Average Percentage: 73.72%
+Highest Percentage: 93.25% (Student: Priya)
+Lowest Percentage: 43.00%
+Passed: 8 | Failed: 2
+```
