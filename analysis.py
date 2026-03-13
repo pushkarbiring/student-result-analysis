@@ -65,9 +65,17 @@ def plot_pass_fail_ratio(df):
     """Generates a pie chart for the pass/fail ratio."""
     status_counts = df['Status'].value_counts()
     
+    # Dynamically create the explode list based on how many categories exist
+    # Prevents errors if everyone passes (1 category) or if there's a mix (2 categories)
+    explode_list = [0.05] + [0] * (len(status_counts) - 1)
+    
     plt.figure(figsize=(6, 6))
+    
+    # Slice the colors list to match the number of categories
+    colors = ['#66b3ff', '#ff9999'][:len(status_counts)]
+    
     plt.pie(status_counts, labels=status_counts.index, autopct='%1.1f%%', 
-            colors=['#66b3ff', '#ff9999'], startangle=90, explode=(0.05, 0))
+            colors=colors, startangle=90, explode=explode_list)
     
     plt.title('Pass vs Fail Ratio')
     plt.savefig('pass_fail_ratio.png')

@@ -1,11 +1,11 @@
 Student_ID,Name,Math_Score,Science_Score,English_Score,Coding_Score
-101,Aarav,85,92,78,95
+101,Aarav,85,92,76,95
 102,Sneha,76,88,82,89
-103,Rahul,45,55,60,50
+103,Rahul,45,55,40,50
 104,Priya,92,95,88,98
 105,Vikram,65,70,68,75
 106,Neha,88,84,91,87
 107,Rohan,35,42,50,45
-108,Kavya,78,80,85,82
+108,Kavya,78,35,85,82
 109,Amit,95,90,92,96
 110,Diya,55,60,65,70
