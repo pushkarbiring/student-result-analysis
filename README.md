@@ -18,19 +18,24 @@ The script reads a dataset of student scores, calculates their basic statistics,
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/pushkarbiring/student-result-analysis.git](https://github.com/pushkarbiring/student-result-analysis.git)
+   git clone https://github.com/pushkarbiring/student-result-analysis.git
    cd student-result-analysis
+   ```
 
 2. **Install the required libraries:**
    Make sure you have Python installed, then run:
+   ```bash
    pip install -r requirements.txt
+   ```
 
 3. **Run the script:**
+   ```bash
    python analysis.py
+   ```
 
 ## Project Output
 
-   When you run the script, it outputs a statistical summary directly to the console:
+When you run the script, it outputs a statistical summary directly to the console:
 
 ```text
 --- Class Performance Summary ---
@@ -40,3 +45,15 @@ Highest Percentage: 93.25% (Student: Priya)
 Lowest Percentage: 43.00%
 Passed: 8 | Failed: 2
 ```
+
+## Support 💖
+
+If you found this project helpful or just want to support a fellow developer's coding journey, I'd really appreciate it!
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/YOUR_USERNAME_HERE)
+
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/YOUR_PAYPAL_USERNAME_HERE)
+
+Your support helps me continue building open-source projects and learning AI/ML. 🚀
+
+⭐ If you like this project, consider giving it a star!
